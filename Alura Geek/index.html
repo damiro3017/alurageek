@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<!--HEAD-->
+
+<head>
+  <!-- ETIQUETAS META -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- TITULO DE LA PAGINA + ICONO DE PESTANIA -->
+
+  <title>Alura Geek</title>
+  <link rel="icon" href="images/logo/logo.svg" type="image/gif" sizes="18x18" />
+
+  <!-- LINKS A CSS Y FUENTES -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/principal.css" />
+  <link rel="stylesheet" href="css/catalogo.css" />
+  <link rel="stylesheet" href="css/contacto.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <!-- Media Queries para diseño adaptable -->
+  <style>
+    /* Ajustes generales para dispositivos móviles */
+    @media (max-width: 768px) {
+      .productos {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* Una columna en móviles */
+        gap: 10px;
+      }
+
+      .catalogo--div img {
+        max-width: 100%;
+        /* Imágenes adaptables */
+        height: auto;
+      }
+
+      .search--div {
+        width: 100%;
+      }
+
+      .search--input {
+        width: 80%;
+        padding: 10px;
+      }
+
+      .login--button {
+        width: 100%;
+        padding: 10px;
+      }
+
+      .catalogo--categoria {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .principal--section {
+        text-align: center;
+      }
+    }
+
+    /* Ajustes para pantallas medianas y grandes */
+    @media (min-width: 769px) {
+      .productos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* Tres columnas en pantallas medianas */
+        gap: 20px;
+      }
+
+      .search--div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .search--input {
+        width: 60%;
+      }
+
+      .catalogo--categoria {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+
+  <header class="header">
+    <div class="logo--div" onclick="location.href='index.html'">
+      <img class="logo--img" src="images/logo/logo.svg" alt="Logo Alura Geek" />
+      <h1 class="logo--h1"><span>Alura</span>Geek</h1>
+    </div>
+
+    <div class="login--div">
+      <button class="login--button"><a href="login.html">Login</a></button>
+    </div>
+
+    <div class="search--div">
+      <input class="search--input" placeholder="¿Qué desea buscar?" />
+      <img class="search--img" src="images/logo/lupa.svg" alt="Buscar" />
+    </div>
+  </header>
+
+  <!-- SECCION PRINCIPAL -->
+
+  <section class="principal--section">
+    <h2 class="principal--h2">Febrero Promocional</h2>
+    <p class="principal--p">
+      Productos seleccionados con un 33% de descuento
+    </p>
+    <button type="submit" class="principal--button" onclick="window.location.href='#consolas'">
+      Ver Consolas
+    </button>
+  </section>
+
+  <!-- STAR WARS PRODUCTOS -->
+
+  <section class="catalogo--section">
+    <!-- TITULO CATEGORIA -->
+
+    <div class="catalogo--categoria">
+      <h3 class="catalogo--h3">Star Wars</h3>
+      <a class="catalogo--a" href="allproducts.html">
+        Ver todo
+        <img src="images/logo/flecha.svg" alt="Ver todo" />
+      </a>
+    </div>
+
+    <!-- SECCION PRODUCTOS-->
+
+    <div class="productos">
+      <div class="catalogo--div">
+        <img src="images/productos/1.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/2.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/3.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/4.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/5.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/6.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSOLAS -->
+
+  <section class="catalogo--section" id="consolas">
+    <!-- TITULO CATEGORIA -->
+
+    <div class="catalogo--categoria">
+      <h3 class="catalogo--h3">Consolas</h3>
+      <a class="catalogo--a" href="allproducts.html">
+        Ver todo
+        <img src="images/logo/flecha.svg" alt="Ver todo" />
+      </a>
+    </div>
+
+    <!-- SECCION PRODUCTOS-->
+
+    <div class="productos">
+      <div class="catalogo--div">
+        <img src="images/productos/1b.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/2b.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/3b.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/4b.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/5b.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+
+      <div class="catalogo--div">
+        <img src="images/productos/6b.jpg" alt="Producto XYZ" loading="lazy" />
+        <p>Producto XYZ</p>
+        <p>$ 60.00</p>
+        <a class="catalogo--a" href="producto.html">Ver producto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer--content">
+      <p>&copy; 2024 AluraGeek - Todos los derechos reservados</p>
+    </div>
+  </footer>
+</body>
+
+</html>
